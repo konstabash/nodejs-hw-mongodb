@@ -69,7 +69,9 @@ export const updateContact = async (contactId, payload, options = {}) => {
     },
   );
 
-  if (!rawResult || !rawResult.value) return null;
+  if (!rawResult) {
+    return null;
+  }
 
   return {
     contact: rawResult.value,
