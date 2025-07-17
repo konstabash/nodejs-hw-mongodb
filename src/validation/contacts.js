@@ -13,6 +13,7 @@ export const createContactsSchema = Joi.object({
     }
     return true;
   }),
+  photo: { type: String },
 });
 
 export const updateContactsSchema = Joi.object({
@@ -21,4 +22,5 @@ export const updateContactsSchema = Joi.object({
   email: Joi.string().email().min(3).max(20),
   isFavourite: Joi.boolean(),
   contactType: Joi.string().valid('work', 'home', 'personal'),
+  photo: { type: String },
 });

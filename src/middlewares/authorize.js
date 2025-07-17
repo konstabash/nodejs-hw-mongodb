@@ -11,9 +11,9 @@ export const authorize = async (req, res, next) => {
 
   const contact = await ContactsCollection.findOne({ _id: contactId, userId });
 
-  if (!contact) {
-    return next(createHttpError(403, 'You do not have access to this contact'));
-  }
+  // if (!contact) {
+  //   return next(createHttpError(403, 'You do not have access to this contact'));
+  // }
 
   req.contact = contact;
 
