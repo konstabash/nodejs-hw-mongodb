@@ -14,7 +14,6 @@ requestBody:
           - name
           - phoneNumber
           - contactType
-          - userId
         properties:
           name:
             description: "Contact's name"
@@ -37,14 +36,10 @@ requestBody:
             description: "Contact's type"
             type: string
             enum: ['work', 'home', 'personal']
-          userId:
-            description: 'ID of the user who owns the contact'
-            type: string
-            example: 685f0a765740cd6f21ac8f9d
           photo:
             description: "Link to contact's photo"
             type: string
-            example: https://res.cloudinary.com/dtxomyzoe/image/upload/v1752528465/csenuzcteawtloutc0z6.jpg
+            format: binary
 responses:
   '201':
     description: Creates a contact

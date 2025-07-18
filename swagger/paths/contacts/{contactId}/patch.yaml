@@ -42,7 +42,7 @@ requestBody:
           photo:
             description: "Link to contact's photo"
             type: string
-            example: https://res.cloudinary.com/dtxomyzoe/image/upload/v1752528465/csenuzcteawtloutc0z6.jpg
+            format: binary
 responses:
   '200':
     description: Modifies contact
